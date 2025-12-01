@@ -76,25 +76,25 @@ def simplify_opening(pgn):
 
 df["Opening"] = df["pgn"].apply(simplify_opening)
 ```
-  Böylece sadece başlangıç hamlesi alındı.
-  Bu, açılışın oyun sonucunu etkileyebileceği hipotezine dayanır.
-  Bu işlem daha sonra Label Encoding ile sayısal hale getirilir.
+   Böylece sadece başlangıç hamlesi alındı.
+   Bu, açılışın oyun sonucunu etkileyebileceği hipotezine dayanır.
+   Bu işlem daha sonra Label Encoding ile sayısal hale getirilir.
 <br>
 <br>
 2. **Rating Farkı (rating_diff) – En güçlü feature**
 <br>
 <br>
-  Bu özellik beyazın siyaha göre ne kadar güçlü olduğunu gösterir:
+   Bu özellik beyazın siyaha göre ne kadar güçlü olduğunu gösterir:
 
-  rating_diff = white_rating - black_rating
+   rating_diff = white_rating - black_rating
 
-  Bu değişken sonuç üzerinde çok kritiktir:
+   Bu değişken sonuç üzerinde çok kritiktir:
 
-  Pozitif → Beyaz güçlü
+   Pozitif → Beyaz güçlü
 
-  Negatif → Siyah güçlü
+   Negatif → Siyah güçlü
 
-  0 → Oyuncular eşit güçte → Berabere ihtimali artar
+   0 → Oyuncular eşit güçte → Berabere ihtimali artar
 
 ## Veri Görselleştirme
 
