@@ -64,7 +64,7 @@ df = df.sample(n=25000, random_state=42)
 ```
 ## Özellik Mühendisliği
 
-##### 1. İlk Hamle (Opening) Çıkarımı
+#### 1. İlk Hamle (Opening) Çıkarımı
 
 PGN formatı komple hamle metni içerir.
 Ancak tüm hamleleri kullanmak model için gereksiz karmaşıktır. Bu yüzden sadece ilk hamle alınır:
@@ -82,7 +82,7 @@ Bu, açılışın oyun sonucunu etkileyebileceği hipotezine dayanır.
 Bu işlem daha sonra **Label Encoding** ile sayısal hale getirilir.
 <br>
 <br>
-##### 2. Rating Farkı (`rating_diff`) – En güçlü özellik
+#### 2. Rating Farkı (`rating_diff`) – En güçlü özellik
 
 Bu özellik, beyazın siyaha göre ne kadar güçlü olduğunu gösterir:
 
