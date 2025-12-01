@@ -64,10 +64,9 @@ df = df.sample(n=25000, random_state=42)
 ```
 
 ## Özellik Mühendisliği
-
 1. **İlk hamle (Opening) çıkarımı**
 <br>
-<br>
+
 pgn formatı komple hamle metni içerir.
 
 Ancak tüm hamleleri kullanmak model için gereksiz karmaşıktır. Bu yüzden:
