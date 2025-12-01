@@ -63,13 +63,12 @@ df = df.dropna(subset=['white_rating', 'black_rating', 'winner', 'pgn', 'time_co
 df = df.sample(n=25000, random_state=42)
 ```
 ## Özellik Mühendisliği
-<br>
 
-1. **İlk hamle (Opening) çıkarımı**
-<br>
-&nbsp;&nbsp;&nbsp;pgn formatı komple hamle metni içerir.
+### 1. İlk Hamle (Opening) Çıkarımı
 
-&nbsp;&nbsp;&nbsp;Ancak tüm hamleleri kullanmak model için gereksiz karmaşıktır. Bu yüzden:
+PGN formatı komple hamle metni içerir.
+Ancak tüm hamleleri kullanmak model için gereksiz karmaşıktır. Bu yüzden sadece ilk hamle alınır:
+
 ```python
 def simplify_opening(pgn):
     moves = pgn.strip().split()
@@ -77,25 +76,27 @@ def simplify_opening(pgn):
 
 df["Opening"] = df["pgn"].apply(simplify_opening)
 ```
-&nbsp;&nbsp;&nbsp;Böylece sadece başlangıç hamlesi alındı.
-&nbsp;&nbsp;&nbsp;Bu, açılışın oyun sonucunu etkileyebileceği hipotezine dayanır.
-&nbsp;&nbsp;&nbsp;Bu işlem daha sonra Label Encoding ile sayısal hale getirilir.
-<br>
-<br>
-2. **Rating Farkı (rating_diff) – En güçlü feature**
-<br>
-<br>
-&nbsp;&nbsp;&nbsp;Bu özellik beyazın siyaha göre ne kadar güçlü olduğunu gösterir:
 
-&nbsp;&nbsp;&nbsp;rating_diff = white_rating - black_rating
+Böylece sadece başlangıç hamlesi alındı.
+Bu, açılışın oyun sonucunu etkileyebileceği hipotezine dayanır.
+Bu işlem daha sonra **Label Encoding** ile sayısal hale getirilir.
 
-&nbsp;&nbsp;&nbsp;Bu değişken sonuç üzerinde çok kritiktir:
+---
 
-&nbsp;&nbsp;&nbsp;Pozitif → Beyaz güçlü
+### 2. Rating Farkı (`rating_diff`) – En güçlü özellik
 
-&nbsp;&nbsp;&nbsp;Negatif → Siyah güçlü
+Bu özellik, beyazın siyaha göre ne kadar güçlü olduğunu gösterir:
 
-&nbsp;&nbsp;&nbsp;0 → Oyuncular eşit güçte → Berabere ihtimali artar
+```python
+rating_diff = white_rating - black_rating
+```
+
+* **Pozitif:** Beyaz güçlü
+* **Negatif:** Siyah güçlü
+* **0:** Oyuncular eşit güçte → Berabere ihtimali artar
+
+Bu değişken sonuç üzerinde çok kritiktir.
+
 ## Veri Görselleştirme
 
 Projede yapılan başlıca grafikler:
