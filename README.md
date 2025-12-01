@@ -64,9 +64,10 @@ df = df.sample(n=25000, random_state=42)
 ```
 
 ## Özellik Mühendisliği
-<br>
+
 1. **İlk hamle (Opening) çıkarımı**
-<br> 
+<br>
+<br>
 pgn formatı komple hamle metni içerir.
 
 Ancak tüm hamleleri kullanmak model için gereksiz karmaşıktır. Bu yüzden:
@@ -83,6 +84,7 @@ Bu işlem daha sonra Label Encoding ile sayısal hale getirilir.
 <br>
 <br>
 2. **Rating Farkı (rating_diff) – En güçlü feature**
+<br>
 <br>
 Bu özellik beyazın siyaha göre ne kadar güçlü olduğunu gösterir:
 
