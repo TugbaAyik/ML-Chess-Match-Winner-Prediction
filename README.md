@@ -38,25 +38,31 @@ Bu projede pgn içinden sadece ilk hamle (opening) çıkarılmıştır.
 ##  Veri Ön İşleme
 
 1. **Başlamamış oyunların kaldırılması**
+   <br>
+   status sütunu içerisindeki noStart ile eşleşen satırlar veriden kaldırılır.
 
 ```python
 df = df[df['status'] != 'noStart']
 ```
 
 2. **Eksik değerlerin silinmesi**
+   <br>
+   Kullanacağımız sütunlarda NaN olan değerler var ise bunlar temizlenir. 
 
 ```python
 df = df.dropna(subset=['white_rating', 'black_rating', 'winner', 'pgn', 'time_control'])
 ```
 
 3. **25000 satırlık örnek seçimi**
-Büyük veri modelleri gereksiz yavaşlatmaması için dataset rastgele 25.000 satıra indirildi.
+   <br>
+   Büyük veri modelleri gereksiz yavaşlatmaması için dataset rastgele 25.000 satıra indirildi.
 ```python
 df = df.sample(n=25000, random_state=42)
 ```
 
 ## Özellik Mühendisliği
 1. **İlk hamle (Opening) çıkarımı**
+   <br>
 pgn formatı komple hamle metni içerir.
 Ancak tüm hamleleri kullanmak model için gereksiz karmaşıktır. Bu yüzden:
 ```python
@@ -117,11 +123,11 @@ Negatifse siyah avantajlı
 
 String değişkenler sayısallaştırıldı:
 
-time_control
+- time_control
 
-Opening
+- Opening
 
-winner (target)
+- winner (target)
 
 ```python
 le_opening.fit_transform(...)
@@ -192,7 +198,6 @@ Satranç maç sonuçları rating_diff ve white_rating/black_rating gibi lineer e
 Logistic Regression de iyi bir sonuç verdi (%74.22) fakat SVM, margin (marjin) kullanarak sınıf sınırını optimize etti.
 
 * **Scaling ve kernel avantajı**
-
 Veriler StandardScaler ile ölçeklendi. SVM, özellikle scaled verilerde çok daha stabil ve yüksek doğruluk sağlar.
 
 KNN ve Decision Tree, scaling veya noisy verilerden etkilenir; bu yüzden biraz daha düşük performans sergiledi.
