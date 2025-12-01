@@ -64,8 +64,9 @@ df = df.sample(n=25000, random_state=42)
 ```
 
 ## Özellik Mühendisliği
+<br>
 1. **İlk hamle (Opening) çıkarımı**
-2. 
+   
 pgn formatı komple hamle metni içerir.
 Ancak tüm hamleleri kullanmak model için gereksiz karmaşıktır. Bu yüzden:
 ```python
@@ -223,11 +224,11 @@ En yüksek doğruluk SVM ile elde edilmiştir: %74.42
 
 SVM tercih sebebi:
 
-Verinin lineer olmayan sınırlarını iyi ayırabilmesi
+  * Verinin lineer olmayan sınırlarını iyi ayırabilmesi
 
-Scaling sonrası daha kararlı ve yüksek performans
+  * Scaling sonrası daha kararlı ve yüksek performans
 
-Overfitting’e karşı dayanıklı yapısı
+  * Overfitting’e karşı dayanıklı yapısı
 
 Bu nedenle projede tahmin ve ileri analizlerde SVM modeli kullanılmalıdır.
 ## Model Değerlendirme
@@ -253,8 +254,9 @@ else:
 
 Bu nedenle projede 3 sınıf için:
 
-F1-score
-Sınıf bazlı başarı dağılımı
+  -> F1-score
+  
+  -> Sınıf bazlı başarı dağılımı
 
 gösterilmiştir.
 
