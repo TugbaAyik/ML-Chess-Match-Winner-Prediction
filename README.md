@@ -62,7 +62,6 @@ df = df.dropna(subset=['white_rating', 'black_rating', 'winner', 'pgn', 'time_co
 ```python
 df = df.sample(n=25000, random_state=42)
 ```
-
 ## Özellik Mühendisliği
 <br>
 
@@ -97,7 +96,6 @@ df["Opening"] = df["pgn"].apply(simplify_opening)
 &nbsp;&nbsp;&nbsp;Negatif → Siyah güçlü
 
 &nbsp;&nbsp;&nbsp;0 → Oyuncular eşit güçte → Berabere ihtimali artar
-
 ## Veri Görselleştirme
 
 Projede yapılan başlıca grafikler:
