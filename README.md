@@ -239,13 +239,13 @@ Modelin başarı ölçütleri:
 * **Classification Report**
 * **Confusion Matrix**
 <br>
-<img src="images/confusion_matrix.png" width="500" height="auto"><br>
+<img src="images/confusion_matrix.png" width="800" height="auto"><br>
 
 ## ROC ve Çok Sınıflı F1 Analizi
 
 Veri seti **3 sınıf** içerdiğinden klasik ROC eğrisi yalnızca binary veri için çalışır.
 <br>
-<img src="images/roc_curve.png" width="500" height="auto"><br>
+<img src="images/roc_curve.png" width="800" height="auto"><br>
 
 Kod:
 
