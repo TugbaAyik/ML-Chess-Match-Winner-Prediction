@@ -104,12 +104,13 @@ Projede yapılan başlıca grafikler:
 
 * Hangi tarafın daha çok kazandığını gösterir. Yani White, black ve draw sayılarını gösteren bar plot diyebiliriz.
 <br>
-images/kazanan_dagilim.png
-<br>
+<img src="images/kazanan_dagilim.png" width="500" height="auto"><br>
 
 ### Rating Dağılımı
 
 * Beyaz ve siyah oyuncu rating histogramları.
+<br>
+<img src="images/rating_dagilimi.png" width="500" height="auto"><br>
 
 ### Rating farkı – kazanan ilişkisi
 
@@ -121,12 +122,14 @@ rating_diff pozitifse beyaz kazanma olasılığı yükseliyor
 Negatifse siyah avantajlı
 
 0 civarı → draw artıyor
-
+<br>
+<img src="images/rating_farki.png" width="500" height="auto"><br>
 ### En Popüler 10 Açılış
 
 * İlk hamleye göre sıralanmış açılış popülerlik grafiği.
 * e4, d4, Nf3, c4 öne çıkıyor.
-
+<br>
+<img src="images/populer_acilislar.png" width="500" height="auto"><br>
 ## Veri Kodlama ve Ölçekleme
 * **Label Encoding**
 
@@ -184,17 +187,8 @@ Yapılan testler sonucunda Decision Tree modelinin %66.60 ile en düşük başar
 Buna karşılık Logistic Regression (%75.74) ve SVM (%75.76) modelleri en yüksek başarıyı elde etmiştir. Bu durum, veri setimizin yapısının karmaşık, doğrusal olmayan (non-linear) modellerden ziyade; doğrusal sınırlarla ayrılmaya daha uygun olduğunu göstermektedir. Random Forest modeli, Decision Tree'nin varyansını düşürerek başarıyı %73.58'e çekse de, problemin yapısı gereği lineer modellerin (LogReg, SVM) kararlılığına ulaşamamıştır.
 ## Modellerin Başarı Sonuçları
 
-Logistic Regression Başarısı: %75.74
 <br>
-Random Forest Başarısı: %73.58
-<br>
-Decision Tree Başarısı: %66.60
-<br>
-KNN Başarısı: %71.94
-<br>
-Naive Bayes Başarısı: %75.20
-<br>
-SVM Başarısı: %75.76
+<img src="images/modeller.png" width="500" height="auto"><br>
 
 En yüksek doğruluk SVM (Support Vector Machine) ile elde edilmiştir:
 EN İYİ MODEL: SVM (%74.42)
@@ -244,10 +238,14 @@ Modelin başarı ölçütleri:
 * **Accuracy Score**
 * **Classification Report**
 * **Confusion Matrix**
+<br>
+<img src="images/confusion_matrix.png" width="500" height="auto"><br>
 
 ## ROC ve Çok Sınıflı F1 Analizi
 
 Veri seti **3 sınıf** içerdiğinden klasik ROC eğrisi yalnızca binary veri için çalışır.
+<br>
+<img src="images/roc_curve.png" width="500" height="auto"><br>
 
 Kod:
 
