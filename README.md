@@ -103,6 +103,9 @@ Projede yapılan başlıca grafikler:
 ### Kazanan Dağılımı
 
 * Hangi tarafın daha çok kazandığını gösterir. Yani White, black ve draw sayılarını gösteren bar plot diyebiliriz.
+<br>
+</images/kazanan_dağilim>
+<br>
 
 ### Rating Dağılımı
 
@@ -174,23 +177,19 @@ models = {
 }
 ```
 
-Aşağıdaki 6 model denenmiştir:
+Model Performans Analizi:
 
-Model	Açıklama
-Logistic Regression	Lineer sınıflandırıcı, baseline
-Random Forest	Ensemble, çok güçlü model
-Decision Tree	Basit ama genelde aşırı öğrenir
-KNN	Komşuluk tabanlı
-Naive Bayes	Basit, hızlı
-SVM	Güçlü, özellikle scaled veride iyi
+Yapılan testler sonucunda Decision Tree modelinin %66.60 ile en düşük başarıyı gösterdiği gözlemlenmiştir. Bunun temel nedeni, modelin derinlik kısıtlaması (max_depth) olmadan eğitilmesidir. Bu durum, modelin eğitim verisindeki gürültüleri ezberlemesine (Overfitting) ve test verisi üzerinde genelleme yeteneğini kaybetmesine yol açmıştır.
+
+Buna karşılık Logistic Regression (%75.74) ve SVM (%75.76) modelleri en yüksek başarıyı elde etmiştir. Bu durum, veri setimizin yapısının karmaşık, doğrusal olmayan (non-linear) modellerden ziyade; doğrusal sınırlarla ayrılmaya daha uygun olduğunu göstermektedir. Random Forest modeli, Decision Tree'nin varyansını düşürerek başarıyı %73.58'e çekse de, problemin yapısı gereği lineer modellerin (LogReg, SVM) kararlılığına ulaşamamıştır.
 ## Modellerin Başarı Sonuçları
 
-Logistic Regression Başarısı: %74.22
-Random Forest Başarısı: %70.94
-Decision Tree Başarısı: %65.88
-KNN Başarısı: %71.32
-Naive Bayes Başarısı: %74.34
-SVM Başarısı: %74.42
+Logistic Regression Başarısı: %75.74
+Random Forest Başarısı: %73.58
+Decision Tree Başarısı: %66.60
+KNN Başarısı: %71.94
+Naive Bayes Başarısı: %75.20
+SVM Başarısı: %75.76
 
 En yüksek doğruluk SVM (Support Vector Machine) ile elde edilmiştir:
 EN İYİ MODEL: SVM (%74.42)
@@ -201,7 +200,7 @@ EN İYİ MODEL: SVM (%74.42)
 
     Satranç maç sonuçları rating_diff ve white_rating/black_rating gibi lineer etkili değişkenlerle kısmen ayrılabilir.
 
-    Logistic Regression de iyi bir sonuç verdi (%74.22) fakat SVM, margin (marjin) kullanarak sınıf sınırını optimize etti.
+    Logistic Regression de iyi bir sonuç verdi (%75.74) fakat SVM, margin (marjin) kullanarak sınıf sınırını optimize etti.
 
 * **Scaling ve kernel avantajı**
     Veriler StandardScaler ile ölçeklendi. SVM, özellikle scaled verilerde çok daha stabil ve yüksek doğruluk sağlar.
@@ -210,7 +209,7 @@ EN İYİ MODEL: SVM (%74.42)
 
 * **Overfitting riskleri**
 
-    Random Forest ve Decision Tree, küçük veri setlerinde overfit olma eğilimindedir (%65–70 civarı).
+    Random Forest ve Decision Tree, küçük veri setlerinde overfit olma eğilimindedir.
 
     SVM, margin maximization ile aşırı öğrenmeyi önler ve genelleme kapasitesi yüksektir.
 
@@ -222,7 +221,7 @@ EN İYİ MODEL: SVM (%74.42)
 
 Özet:
 
-En yüksek doğruluk SVM ile elde edilmiştir: %74.42
+En yüksek doğruluk SVM ile elde edilmiştir: %75.76
 
 SVM tercih sebebi:
 
