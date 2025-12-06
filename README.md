@@ -104,13 +104,13 @@ Projede yapılan başlıca grafikler:
 
 * Hangi tarafın daha çok kazandığını gösterir. Yani White, black ve draw sayılarını gösteren bar plot diyebiliriz.
 <br>
-<img src="images/kazanan_dagilim.png" width="500" height="auto"><br>
+<img src="images/kazanan_dagilim.png" width="800" height="auto"><br>
 
 ### Rating Dağılımı
 
 * Beyaz ve siyah oyuncu rating histogramları.
 <br>
-<img src="images/rating_dagilimi.png" width="500" height="auto"><br>
+<img src="images/rating_dagilimi.png" width="800" height="auto"><br>
 
 ### Rating farkı – kazanan ilişkisi
 
@@ -123,13 +123,13 @@ Negatifse siyah avantajlı
 
 0 civarı → draw artıyor
 <br>
-<img src="images/rating_farki.png" width="500" height="auto"><br>
+<img src="images/rating_farki.png" width="800" height="auto"><br>
 ### En Popüler 10 Açılış
 
 * İlk hamleye göre sıralanmış açılış popülerlik grafiği.
 * e4, d4, Nf3, c4 öne çıkıyor.
 <br>
-<img src="images/populer_acilislar.png" width="500" height="auto"><br>
+<img src="images/populer_acilislar.png" width="800" height="auto"><br>
 ## Veri Kodlama ve Ölçekleme
 * **Label Encoding**
 
