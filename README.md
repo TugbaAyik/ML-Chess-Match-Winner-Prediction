@@ -104,7 +104,7 @@ Projede yapılan başlıca grafikler:
 
 * Hangi tarafın daha çok kazandığını gösterir. Yani White, black ve draw sayılarını gösteren bar plot diyebiliriz.
 <br>
-</images/kazanan_dağilim>
+images/kazanan_dagilim.png
 <br>
 
 ### Rating Dağılımı
@@ -185,10 +185,15 @@ Buna karşılık Logistic Regression (%75.74) ve SVM (%75.76) modelleri en yüks
 ## Modellerin Başarı Sonuçları
 
 Logistic Regression Başarısı: %75.74
+<br>
 Random Forest Başarısı: %73.58
+<br>
 Decision Tree Başarısı: %66.60
+<br>
 KNN Başarısı: %71.94
+<br>
 Naive Bayes Başarısı: %75.20
+<br>
 SVM Başarısı: %75.76
 
 En yüksek doğruluk SVM (Support Vector Machine) ile elde edilmiştir:
